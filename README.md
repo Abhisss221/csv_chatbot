@@ -264,7 +264,3 @@ LLM = Translator
 DuckDB = Source of Truth
 
 Flask = Orchestrator
-
-This is not a chatbot that guesses —
-It is a deterministic analytics engine with natural language input.
->>>>>>> 73bd1f2cc9f525ef06fc174c43ddb0fe31d86fc5
