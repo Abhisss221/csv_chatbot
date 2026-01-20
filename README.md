@@ -35,6 +35,7 @@ Validated Tabular Response
 ---
 
 ## 📂 Project Structure
+project-root/
 ├── app.py # Flask application
 ├── bot3.py # SQL generation, validation & execution
 ├── data/
