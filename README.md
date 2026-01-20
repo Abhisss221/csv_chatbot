@@ -31,14 +31,10 @@ DuckDB (Single Source of Truth)
 ↓
 Validated Tabular Response
 
-yaml
-Copy code
 
 ---
 
 ## 📂 Project Structure
-
-.
 ├── app.py # Flask application
 ├── bot3.py # SQL generation, validation & execution
 ├── data/
@@ -48,10 +44,7 @@ Copy code
 │ └── index.html # Frontend UI
 └── README.md
 
-yaml
-Copy code
 
----
 
 ## 🧠 How It Works
 
@@ -61,8 +54,6 @@ The user submits a natural language question through the UI or `/ask` API.
 Example:
 "What is total market value by portfolio?"
 
-sql
-Copy code
 
 ---
 
@@ -73,7 +64,7 @@ The LLM:
 - Returns `NONE` if the question is unsupported
 
 Example SQL:
-```sql
+
 SELECT PortfolioName, SUM(MV_Base)
 FROM holdings
 GROUP BY PortfolioName;
@@ -154,29 +145,24 @@ Non-financial or vague queries
 
 ⚙️ Running the Project
 Install Dependencies
-bash
-Copy code
+
 pip install flask duckdb pandas ollama
 Start Server
-bash
-Copy code
 python app.py
+
 Open in Browser
-arduino
-Copy code
 http://localhost:8000
+
 🧪 API Example
 POST /ask
 
-json
-Copy code
+
 {
   "question": "Total net cash flow by portfolio"
 }
 Response
 
-json
-Copy code
+
 {
   "answer": "PortfolioName  NetCash\nFundA  120000\nFundB  -45000"
 }
